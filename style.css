@@ -220,3 +220,65 @@ p.lead {
 .skill-badge:hover i {
     transform: scale(1.2);
 }
+
+/* =========================================
+   NUEVO ESTILO: SOFT SKILLS EN CAJAS
+   ========================================= */
+
+/* Estilo del Icono Grande */
+.soft-skill-box i {
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #eee, #999); 
+    
+    /* SOLUCIÓN: Poner siempre estas dos líneas juntas */
+    -webkit-background-clip: text; /* Para Chrome/Safari */
+    background-clip: text;         /* Estándar para el futuro */
+    
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Colores específicos al hacer hover (Corrección aplicada aquí también) */
+.soft-skill-box:hover i.text-primary { 
+    background: var(--primary-gradient); 
+    -webkit-background-clip: text; 
+    background-clip: text; /* <--- Añadido */
+}
+
+.soft-skill-box:hover i.text-warning { 
+    background: linear-gradient(to right, #f6d365, #fda085); 
+    -webkit-background-clip: text; 
+    background-clip: text; /* <--- Añadido */
+}
+
+.soft-skill-box:hover i.text-success { 
+    background: linear-gradient(to right, #84fab0, #8fd3f4); 
+    -webkit-background-clip: text; 
+    background-clip: text; /* <--- Añadido */
+}
+
+.soft-skill-box:hover i.text-info { 
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); 
+    -webkit-background-clip: text; 
+    background-clip: text; /* <--- Añadido */
+}
+
+.soft-skill-box:hover i.text-danger { 
+    background: linear-gradient(to right, #ff9a9e, #fecfef); 
+    -webkit-background-clip: text; 
+    background-clip: text; /* <--- Añadido */
+}
+
+.soft-skill-box:hover i.text-light { 
+    background: linear-gradient(to right, #e0eafc, #cfdef3); 
+    -webkit-background-clip: text; 
+    background-clip: text; /* <--- Añadido */
+}
+
+/* Texto de la habilidad */
+.soft-skill-box span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
