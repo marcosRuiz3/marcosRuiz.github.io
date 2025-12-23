@@ -173,21 +173,26 @@ h1 {
 }
 
 /* Gradiente en el texto (CORREGIDO) */
+/* Corrección para Firefox en Linux */
 .text-gradient {
-    /* 1. Fondo del gradiente */
-    background: var(--primary-gradient) !important;
+    /* 1. Usamos background-image explícitamente */
+    background-image: var(--primary-gradient);
+    background-color: transparent; /* Seguridad extra */
     
-    /* 2. OBLIGATORIO: Forzamos el recorte con !important */
-    -webkit-background-clip: text !important; /* Para Chrome/Safari/Edge */
-    background-clip: text !important;         /* Para Firefox */
+    /* 2. Propiedades de recorte */
+    -webkit-background-clip: text;
+    background-clip: text;
     
-    /* 3. Texto transparente para ver el fondo */
-    -webkit-text-fill-color: transparent !important;
-    color: transparent !important;
+    /* 3. Texto transparente */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     
-    /* 4. Ajustes de visualización */
-    display: inline-block;
-    background-size: 100%; /* Asegura que el gradiente cubra el texto */
+    /* 4. EL ARREGLO: Cambiar 'inline-block' a 'inline' */
+    /* Esto evita que Firefox pinte la caja rectangular */
+    display: inline;
+    
+    /* 5. Aseguramos que no herede decoraciones raras */
+    text-decoration: none;
 }
 
 p.lead {
