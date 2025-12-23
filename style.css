@@ -383,3 +383,70 @@ strong {
     display: inline-block;
     margin-bottom: 10px;
 }
+
+/* =========================================
+   ESTILOS: PROYECTOS (PORTFOLIO)
+   ========================================= */
+
+/* La tarjeta del proyecto (Estilo Cristal) */
+.project-card {
+    background: rgba(30, 41, 59, 0.4);     /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(10px);           /* Desenfoque */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;                      /* Para que la imagen no se salga de las esquinas */
+    transition: all 0.4s ease;
+    height: 100%;                          /* Para que todas midan lo mismo */
+}
+
+/* Efecto Hover (Levitación y Brillo) */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra profunda */
+    border-color: rgba(59, 130, 246, 0.5);      /* Borde azul al pasar ratón */
+}
+
+/* Imagen del proyecto */
+.project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease;
+}
+
+/* Zoom sutil en la imagen al pasar el ratón */
+.project-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Cuerpo de la tarjeta */
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card .card-title {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.project-card .card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ETIQUETAS DE TECNOLOGÍA (Pills) */
+.tech-pill {
+    background: rgba(59, 130, 246, 0.1);   /* Fondo azul muy suave */
+    color: #60a5fa;                        /* Texto azul neón */
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}

@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos - [Tu Nombre]</title>
+    <title>Proyectos - Marcos Ruiz Barrajón</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .project-card { transition: transform 0.3s; }
-        .project-card:hover { transform: translateY(-5px); }
-        .card-img-top { height: 200px; object-fit: cover; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">[Tus Iniciales]</a>
+            <a class="navbar-brand fw-bold" href="index.html">Marcos Ruiz Barrajón</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,61 +25,104 @@
                     <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
                     <li class="nav-item"><a class="nav-link" href="trayectoria.html">Trayectoria</a></li>
                     <li class="nav-item"><a class="nav-link active" href="proyectos.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container py-4">
-        <h2 class="text-center mb-5 fw-bold">Mis Proyectos Académicos y Personales</h2>
+    <div class="container py-5 mt-5">
+        
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="text-gradient">Mis Proyectos</h1>
+                <p class="lead text-muted">Una selección de mis trabajos académicos y personales.</p>
+            </div>
+        </div>
         
         <div class="row g-4">
+            
             <div class="col-md-4">
-                <div class="card project-card shadow-sm h-100">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Proyecto 1">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">E-Commerce Java</h5>
-                        <p class="card-text text-muted small">Plataforma de comercio electrónico con microservicios.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-primary">Java</span>
-                            <span class="badge bg-dark">Spring Boot</span>
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/400x200/0f172a/3b82f6?text=Java+E-Commerce" class="card-img-top" alt="E-Commerce Java">
+                    
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">E-Commerce Java</h5>
+                        <p class="card-text">
+                            Plataforma completa de comercio electrónico basada en arquitectura de microservicios, escalable y robusta.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">MySQL</span>
                         </div>
-                        <a href="#" class="btn btn-outline-primary w-100"><i class="fab fa-github"></i> Ver Código</a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-custom-outline w-100">
+                                <i class="fab fa-github me-2"></i> Ver Código
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="card project-card shadow-sm h-100">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Proyecto 2">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Red Neuronal CNN</h5>
-                        <p class="card-text text-muted small">Clasificador de imágenes médicas usando Deep Learning.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-warning text-dark">Python</span>
-                            <span class="badge bg-info text-dark">TensorFlow</span>
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/400x200/0f172a/8b5cf6?text=AI+Medical" class="card-img-top" alt="Red Neuronal">
+                    
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Red Neuronal CNN</h5>
+                        <p class="card-text">
+                            Modelo de Deep Learning para clasificación de imágenes médicas con alta precisión diagnóstica.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">TensorFlow</span>
+                            <span class="tech-pill">OpenCV</span>
                         </div>
-                        <a href="#" class="btn btn-outline-primary w-100"><i class="fab fa-github"></i> Ver Código</a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-custom-outline w-100">
+                                <i class="fab fa-github me-2"></i> Ver Código
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
              <div class="col-md-4">
-                <div class="card project-card shadow-sm h-100">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Proyecto 3">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Gestión de Biblioteca</h5>
-                        <p class="card-text text-muted small">CRUD completo con base de datos relacional y autenticación.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-primary">PHP</span>
-                            <span class="badge bg-secondary">MySQL</span>
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/400x200/0f172a/10b981?text=Library+App" class="card-img-top" alt="Gestión Biblioteca">
+                    
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Gestión de Biblioteca</h5>
+                        <p class="card-text">
+                            Sistema CRUD completo con autenticación de usuarios, gestión de préstamos y base de datos relacional.
+                        </p>
+                        
+                        <div class="mb-4">
+                            <span class="tech-pill">PHP</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">Bootstrap</span>
                         </div>
-                        <a href="#" class="btn btn-outline-primary w-100"><i class="fab fa-github"></i> Ver Código</a>
+                        
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-custom-outline w-100">
+                                <i class="fab fa-github me-2"></i> Ver Código
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+        </div> </div>
+    
+    <footer class="text-center py-4 mt-5 text-muted small">
+        &copy; 2025 Marcos Ruiz Barrajón.
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
