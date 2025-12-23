@@ -452,35 +452,52 @@ strong {
 }
 
 /* =========================================
-   ESTILO NUEVO: PORTADA DIVIDIDA
+   CORRECCIÓN: PORTADA DIVIDIDA
    ========================================= */
 
-/* Imagen Vertical Rectangular */
+/* Hacemos que la sección ocupe TODA la altura de la pantalla */
+.hero-container {
+    min-height: 100vh; /* Altura mínima: 100% del alto de la ventana */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center;
+    padding-top: 80px; /* Compensar la navbar fija */
+    padding-bottom: 50px;
+    
+    /* Tu fondo radial */
+    background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+}
+
+/* Estilo de la imagen rectangular */
 .profile-img-rect {
-    width: 100%;             /* Ocupa el ancho de su columna */
-    max-width: 400px;        /* Que no sea gigantesca en pantallas muy grandes */
-    height: 500px;           /* Altura fija para forzar el formato vertical */
-    object-fit: cover;       /* Recorta la foto para que no se deforme */
-    object-position: center top; /* Centra la cara (ajusta si se corta la cabeza) */
+    width: 100%;
+    max-width: 380px; /* Tamaño ideal para escritorio */
+    height: 500px;    /* Altura fija para el formato vertical */
+    object-fit: cover; /* CLAVE: Recorta la foto sin deformarla */
+    object-position: center top; /* Enfoca la parte de arriba (la cara) */
     
-    border-radius: 20px;     /* Bordes redondeados modernos */
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5); /* Sombra profunda */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     
-    /* Efecto sutil de flotación */
-    transform: rotate(-2deg); /* Un toque de diseño inclinado (opcional) */
     transition: transform 0.3s ease;
 }
 
 .profile-img-rect:hover {
-    transform: rotate(0deg) scale(1.02); /* Se endereza al pasar el ratón */
+    transform: scale(1.02) rotate(1deg);
 }
 
-/* Ajuste para móvil: que no sea tan alta */
-@media (max-width: 768px) {
+/* --- VERSIÓN MÓVIL (Importante para que no se vea mal) --- */
+@media (max-width: 991px) {
+    .hero-container {
+        text-align: center; /* Forzar centrado de texto en móvil */
+        height: auto;       /* Quitar altura fija */
+        padding-top: 100px;
+    }
+    
     .profile-img-rect {
-        height: 350px;
-        margin-bottom: 30px;
-        transform: rotate(0deg); /* En móvil mejor recta */
+        height: 350px;      /* Más bajita en tablet/móvil */
+        max-width: 300px;   /* Más estrecha */
+        margin-bottom: 2rem; /* Separación con el texto */
     }
 }
