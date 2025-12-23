@@ -578,55 +578,50 @@ strong {
     text-align: center;
 }
 
-/* Botón Grande de LinkedIn */
-.linkedin-btn {
-    display: inline-flex;
+/* =========================================
+   BOTONES REDES SOCIALES (UNIFICADOS)
+   ========================================= */
+
+/* 1. Estilo BASE para ambos (Garantiza mismo tamaño) */
+.linkedin-btn, 
+.github-btn {
+    display: inline-flex;        /* Obligatorio para centrar el icono */
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    
+    width: 60px;                 /* Ancho fijo */
+    height: 60px;                /* Alto fijo */
+    
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    font-size: 1.8rem;
+    border-radius: 50%;          /* Círculo perfecto */
+    font-size: 1.8rem;           /* Tamaño del icono */
     color: white;
+    text-decoration: none;       /* Quita el subrayado */
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote */
 }
 
+/* 2. Efecto Hover LINKEDIN (Azul) */
 .linkedin-btn:hover {
-    background: #0077b5; /* Color oficial de LinkedIn */
+    background: #0077b5;
     border-color: #0077b5;
-    transform: scale(1.15) rotate(5deg);
+    transform: scale(1.15) rotate(10deg);
     box-shadow: 0 0 20px rgba(0, 119, 181, 0.6);
-}
-
-/* =========================================
-   BOTÓN GITHUB
-   ========================================= */
-
-.github-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    font-size: 1.8rem;
     color: white;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    text-decoration: none; /* Quita el subrayado */
 }
 
-/* Efecto Hover: Fondo oscuro y brillo violeta */
+/* 3. Efecto Hover GITHUB (Violeta Oscuro) */
 .github-btn:hover {
-    background: #171515; /* Color oficial GitHub */
-    border-color: #6e5494; /* Violeta GitHub */
+    background: #171515;         /* Fondo oscuro GitHub */
+    border-color: #6e5494;       /* Borde violeta */
+    transform: scale(1.15) rotate(-10deg);
+    box-shadow: 0 0 20px rgba(110, 84, 148, 0.6); /* Resplandor violeta */
     color: white;
-    transform: scale(1.15) rotate(-5deg); /* Gira un poco al otro lado */
-    box-shadow: 0 0 20px rgba(110, 84, 148, 0.6); /* Brillo violeta */
 }
+
+
+
+
 
 /* =========================================
    ESTILO: FOTO CONTACTO (LADO IZQUIERDO)
