@@ -16,6 +16,38 @@ body, html {
 }
 
 /* =========================================
+   SOLUCIÓN: BARRA LEGIBLE AL HACER SCROLL
+   ========================================= */
+
+.navbar {
+    /* Estado inicial (arriba del todo): Transparente */
+    background: rgba(15, 23, 42, 0.2); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+    z-index: 9999; /* Asegura que siempre esté POR ENCIMA de todo */
+}
+
+/* Estado SCROLLED (Cuando bajas) */
+.navbar.scrolled {
+    /* 1. Fondo casi sólido para tapar el texto de atrás */
+    background: rgba(15, 23, 42, 0.98) !important; 
+    
+    /* 2. Mucho desenfoque para que lo poco que se vea no moleste */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    /* 3. Sombra fuerte para separar la barra del contenido */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+    
+    /* 4. Borde inferior sutil para marcar el límite */
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* =========================================
    ESTILOS MENU: TEXTO NEÓN + SUBRAYADO
    ========================================= */
 
