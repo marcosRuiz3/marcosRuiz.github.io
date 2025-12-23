@@ -306,9 +306,9 @@ p.lead {
     color: var(--text-main);
 }
 
-/* Hacer que las negritas brillen */
-.strong {
-    color: #60a5fa; /* Un azul cian brillante */
-    font-weight: 700; /* Asegura el grosor */
-    letter-spacing: 0.5px; /* Un pelín más de espacio para que se lea mejor */
+/* Apuntamos a la etiqueta strong directamente */
+strong {
+    color: #60a5fa !important; /* Mantenemos !important por culpa de text-muted */
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
