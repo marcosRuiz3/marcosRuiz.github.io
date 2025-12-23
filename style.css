@@ -8,7 +8,11 @@
     --text-muted: #94a3b8;
 }
 
-
+body {
+    /* Esto empuja todo el contenido hacia abajo para que no 
+       empiece pegado al techo tapado por la barra */
+    padding-top: 80px; 
+}
 
 body, html { 
     height: 100%; 
@@ -168,14 +172,22 @@ h1 {
     z-index: 1;
 }
 
-/* Gradiente en el texto */
+/* Gradiente en el texto (CORREGIDO) */
 .text-gradient {
+    /* 1. Fondo del gradiente */
     background: var(--primary-gradient) !important;
-    -webkit-background-clip: text; /* Safari/Chrome */
-    background-clip: text; /* Estándar */
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    
+    /* 2. OBLIGATORIO: Forzamos el recorte con !important */
+    -webkit-background-clip: text !important; /* Para Chrome/Safari/Edge */
+    background-clip: text !important;         /* Para Firefox */
+    
+    /* 3. Texto transparente para ver el fondo */
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    
+    /* 4. Ajustes de visualización */
     display: inline-block;
+    background-size: 100%; /* Asegura que el gradiente cubra el texto */
 }
 
 p.lead {
