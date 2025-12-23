@@ -16,25 +16,45 @@ body, html {
 }
 
 /* =========================================
-   MEJORA: NAVBAR PREMIUM (GLASSMORPHISM)
+   ESTILOS MENU: TEXTO NEÓN + SUBRAYADO
    ========================================= */
 
-/* --- ESTILOS DE LA BARRA CRISTAL --- */
-.navbar {
-    background: rgba(15, 23, 42, 0.1) !important; /* !important fuerza a quitar el negro */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.4s ease;
-    padding: 15px 0;
+/* 1. Estilo base para los enlaces normales (EXCLUYENDO el botón de contacto) */
+.navbar-nav .nav-link:not(.contact-btn-nav) {
+    position: relative;           /* Necesario para posicionar la línea */
+    color: rgba(255, 255, 255, 0.7) !important; /* Color inicial apagado */
+    font-weight: 500;
+    margin: 0 8px;
+    transition: all 0.3s ease;
 }
 
-/* Cuando bajamos el scroll */
-.navbar.scrolled {
-    background: rgba(15, 23, 42, 0.95) !important; /* Casi opaco al bajar */
-    padding: 10px 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+/* 2. Efecto HOVER y ACTIVE (Iluminación del Texto) */
+/* Se aplica cuando pasas el ratón O cuando estás en esa página */
+.navbar-nav .nav-link:not(.contact-btn-nav):hover,
+.navbar-nav .nav-link:not(.contact-btn-nav).active {
+    color: #ffffff !important;    /* Texto blanco puro */
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), /* Brillo azul intenso */
+                 0 0 20px rgba(59, 130, 246, 0.4); /* Brillo difuso exterior */
+}
+
+/* 3. La Línea de Subrayado (Inicialmente invisible) */
+.navbar-nav .nav-link:not(.contact-btn-nav)::after {
+    content: '';
+    position: absolute;
+    width: 0%;                    /* Empieza sin ancho */
+    height: 2px;                  /* Grosor de la línea */
+    bottom: 5px;                  /* Distancia respecto al texto */
+    left: 50%;                    /* Centrada */
+    transform: translateX(-50%);  /* Centrado perfecto */
+    background-color: #3b82f6;    /* Color de la línea */
+    box-shadow: 0 0 8px #3b82f6;  /* La línea también brilla */
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación elástica */
+}
+
+/* 4. Hacer aparecer la línea en Hover o Active */
+.navbar-nav .nav-link:not(.contact-btn-nav):hover::after,
+.navbar-nav .nav-link:not(.contact-btn-nav).active::after {
+    width: 80%;                   /* Crece hasta el 80% del ancho del texto */
 }
 
 /* --- BOTÓN DE CONTACTO EN EL MENÚ --- */

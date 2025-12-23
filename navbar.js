@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navbarHTML = `
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Marcos Ruiz</a>
+            <a class="navbar-brand fw-bold text-gradient" href="index.html">Marcos Ruiz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
                     <li class="nav-item"><a class="nav-link" href="trayectoria.html">Trayectoria</a></li>
-                    <li class="nav-item"><a class="nav-link" href="proyectos.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
                     <li class="nav-item ms-lg-2">
                         <a class="nav-link contact-btn-nav" href="contacto.html">Contacto</a>
                     </li>
