@@ -312,3 +312,74 @@ strong {
     font-weight: 700;
     letter-spacing: 0.5px;
 }
+
+/* =========================================
+   ESTILOS: TRAYECTORIA (TIMELINE)
+   ========================================= */
+
+/* La línea vertical principal */
+.timeline {
+    border-left: 3px solid rgba(255, 255, 255, 0.1); /* Línea sutil grisácea */
+    margin-left: 10px;
+    padding-left: 40px; /* Espacio entre línea y contenido */
+    position: relative;
+}
+
+/* El contenedor de cada evento */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* El NODO (La bolita brillante en la línea) */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -50px; /* Ajuste milimétrico para caer sobre la línea */
+    top: 5px;    /* Alinear con el título */
+    width: 20px;
+    height: 20px;
+    background: var(--bg-dark); /* El centro es del color del fondo */
+    border: 3px solid #3b82f6;  /* Borde azul */
+    border-radius: 50%;         /* Redondo */
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8); /* El brillo neón */
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Efecto en la bolita al pasar el ratón por el evento */
+.timeline-item:hover::before {
+    background: #3b82f6; /* Se rellena de azul */
+    transform: scale(1.3); /* Se hace más grande */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 1);
+}
+
+/* LA TARJETA DEL CONTENIDO (Glassmorphism) */
+.timeline-content {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateX(10px); /* Se mueve un poco a la derecha */
+    border-color: rgba(59, 130, 246, 0.5); /* El borde se ilumina */
+    background: rgba(30, 41, 59, 0.6);
+}
+
+/* Estilo para las fechas (Badge personalizado) */
+.date-badge {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    display: inline-block;
+    margin-bottom: 10px;
+}
