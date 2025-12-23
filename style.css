@@ -15,15 +15,77 @@ body, html {
     color: var(--text-main);
 }
 
-/* NAVBAR CON EFECTO CRISTAL (Glassmorphism) */
+/* =========================================
+   MEJORA: NAVBAR PREMIUM (GLASSMORPHISM)
+   ========================================= */
+
 .navbar {
-    background: rgba(15, 23, 42, 0.8) !important;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Fondo inicial: Transparente con un toque de desenfoque */
+    background: rgba(15, 23, 42, 0.1); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.0); /* Borde invisible al inicio */
+    transition: all 0.4s ease; /* Transición suave para todo */
+    padding: 15px 0; /* Un poco más alta al principio */
 }
+
+/* ESTADO SCROLLED (Cuando bajas la página) */
+.navbar.scrolled {
+    background: rgba(15, 23, 42, 0.9); /* Más oscura y sólida */
+    backdrop-filter: blur(15px);       /* Más desenfoque */
+    border-bottom: 1px solid rgba(59, 130, 246, 0.3); /* Borde azul sutil */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar altura */
+    padding: 10px 0; /* Se hace un poco más compacta */
+}
+
+/* LOGO CON GRADIENTE */
 .navbar-brand {
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: -0.5px;
+    font-size: 1.5rem;
+    background: var(--primary-gradient); /* Tu gradiente */
+    
+    /* CORRECCIÓN AQUÍ: */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* OBLIGATORIO: El texto debe ser transparente para que se vea el fondo */
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* ENLACES (Items del menú) */
+.nav-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+/* LA LÍNEA DE NEÓN BAJO EL ENLACE */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: #3b82f6; /* Color azul neón */
+    box-shadow: 0 0 10px #3b82f6;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateX(-50%);
+}
+
+/* Al pasar el ratón o estar activo, la línea crece */
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
 }
 
 /* HERO SECTION */
