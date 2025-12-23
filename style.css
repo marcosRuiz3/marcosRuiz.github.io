@@ -506,26 +506,21 @@ strong {
    ESTILOS: CONTACTO (TARJETA DE VISITA)
    ========================================= */
 
-/* Contenedor que centra la tarjeta vertical y horizontalmente */
 /* =========================================
-   CORRECCIÓN: CENTRADO DE CONTACTO
+   CORRECCIÓN: ALINEACIÓN A LA IZQUIERDA
    ========================================= */
 
 .contact-container {
-    width: 100%;                 /* OBLIGATORIO: Ocupar todo el ancho */
-    min-height: 100vh;           /* Ocupar toda la altura */
-    display: flex;               /* Activar modo flexible */
-    justify-content: center;     /* Centrar horizontalmente -> | <- */
-    align-items: center;         /* Centrar verticalmente */
+    width: 100%;
+    min-height: 100vh;
+    /* SE HAN BORRADO LAS LÍNEAS DE FLEXBOX PARA EL CENTRADO */
     
-    /* El mismo fondo que el inicio */
     background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
     
-    padding-top: 60px;           /* Compensar la barra de menú fija */
-    padding-bottom: 20px;
+    padding-top: 120px; /* Un poco más de espacio arriba */
+    padding-bottom: 60px;
 }
 
-/* (El resto de estilos de .business-card déjalos como estaban) */
 .business-card {
     background: rgba(30, 41, 59, 0.6);
     backdrop-filter: blur(15px);
@@ -534,12 +529,11 @@ strong {
     border-radius: 24px;
     padding: 3rem;
     width: 100%;
-    max-width: 450px;
-    text-align: center;
+    /* SE HA BORRADO MAX-WIDTH Y MARGIN: 0 AUTO */
+    text-align: left; /* Alineamos el texto de la tarjeta a la izquierda también */
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
-    margin: 0 auto; /* Seguro extra para centrar */
 }
 
 
