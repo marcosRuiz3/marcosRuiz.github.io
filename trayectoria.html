@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trayectoria - [Tu Nombre]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .timeline { border-left: 3px solid #0d6efd; margin-left: 20px; padding-left: 30px; }
+        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -38px; top: 5px;
+            width: 16px; height: 16px; background: white;
+            border: 4px solid #0d6efd; border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">[Tus Iniciales]</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="trayectoria.html">Trayectoria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="proyectos.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center mb-5">Formación y Experiencia</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="badge bg-primary mb-2">2021 - Actualidad</span>
+                        <h4>Grado en Ingeniería Informática</h4>
+                        <p class="text-muted">Escuela Superior de Informática (UCLM)</p>
+                        <p>Especialidad en [Tu Rama]. Desarrollo de competencias en ingeniería del software, redes y sistemas inteligentes.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="badge bg-secondary mb-2">2023</span>
+                        <h4>Curso de Certificación Cloud</h4>
+                        <p class="text-muted">AWS Academy</p>
+                        <p>Formación complementaria sobre despliegue de infraestructuras en la nube.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="badge bg-secondary mb-2">2019 - 2021</span>
+                        <h4>Bachillerato Científico-Tecnológico</h4>
+                        <p class="text-muted">IES [Nombre del Instituto]</p>
+                        <p>Matrícula de Honor. Inicio del interés por la programación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

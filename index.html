@@ -3,241 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de [Tu Nombre], Ingeniero Informático ESI Ciudad Real. Especialista en [Tu Especialidad].">
-    <meta name="keywords" content="Ingeniero Informático, Portfolio, Ciudad Real, Desarrollador, Java, Python">
-    
-    <title>Marcos Ruiz Barrajón | Ingeniero Informático</title>
-    
+    <title>[Tu Nombre] - Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        :root {
-            --primary-color: #0d6efd; /* Azul Bootstrap por defecto */
-            --bg-hero: #f8f9fa;
-        }
-        
-        /* Hero Section (Cabecera) */
-        .hero-section {
-            background-color: var(--bg-hero);
-            padding: 80px 0;
-            text-align: center;
+        /* Centrado absoluto para la portada */
+        body, html { height: 100%; }
+        .hero-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 50%;
             border: 5px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-
-        /* Timeline (Línea de tiempo vertical) */
-        .timeline {
-            border-left: 3px solid var(--primary-color);
-            padding-left: 20px;
-            margin-left: 10px;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -26px;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            background: white;
-            border: 3px solid var(--primary-color);
-            border-radius: 50%;
-        }
-
-        /* Cards del Portfolio (El efecto visual que buscas) */
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%; /* Para que todas midan lo mismo */
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover; /* Evita que la imagen se deforme */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">MRB</a>
+            <a class="navbar-brand fw-bold" href="index.html">[Tus Iniciales]</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trayectoria.html">Trayectoria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="proyectos.html">Portfolio</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="container">
-            <img src="https://via.placeholder.com/180" alt="Foto de [Tu Nombre]" class="profile-img">
-            <h1 class="display-4 fw-bold">Hola, soy [Tu Nombre]</h1>
-            <p class="lead text-muted">Estudiante de Ingeniería Informática @ ESI Ciudad Real</p>
-            <div class="mt-4">
-                <a href="#portfolio" class="btn btn-primary btn-lg me-2">Ver Proyectos</a>
-                <a href="CV_TuNombre.pdf" class="btn btn-outline-dark btn-lg" download>
-                    <i class="fas fa-download"></i> Descargar CV
+    <div class="hero-container text-center px-3">
+        <div>
+            <img src="https://via.placeholder.com/200" alt="Foto de perfil" class="profile-img mb-4">
+            
+            <h1 class="display-3 fw-bold text-dark">Hola, soy [Tu Nombre]</h1>
+            <p class="lead text-muted mb-4">Ingeniero Informático en formación | ESI Ciudad Real</p>
+            <p class="mb-5 mx-auto" style="max-width: 600px;">
+                Apasionado por crear soluciones tecnológicas eficientes. Especializado en desarrollo backend y arquitecturas web.
+            </p>
+            
+            <div class="d-flex justify-content-center gap-3">
+                <a href="CV_TuNombre.pdf" class="btn btn-primary btn-lg px-4" download>
+                    <i class="fas fa-download me-2"></i> Descargar CV
+                </a>
+                <a href="proyectos.html" class="btn btn-outline-dark btn-lg px-4">
+                    Ver mis trabajos
                 </a>
             </div>
         </div>
-    </header>
-
-    <section id="sobre-mi" class="py-5 container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2 class="mb-4">Sobre mí</h2>
-                <p>Soy un estudiante de 4º curso apasionado por el desarrollo de software y la resolución de problemas complejos. Actualmente enfocado en [Tu especialidad: Backend/IA/Frontend]. Busco oportunidades para aplicar mis conocimientos en entornos reales.</p>
-                
-                <h5 class="mt-4">Soft Skills</h5>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-check text-success me-2"></i>Trabajo en equipo (Metodologías Ágiles)</li>
-                    <li><i class="fas fa-check text-success me-2"></i>Comunicación efectiva</li>
-                    <li><i class="fas fa-check text-success me-2"></i>Proactividad y autoaprendizaje</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h4 class="mb-3">Hard Skills</h4>
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between"><span>Java / Spring</span> <span>80%</span></div>
-                    <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
-                </div>
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between"><span>Python</span> <span>75%</span></div>
-                    <div class="progress"><div class="progress-bar bg-success" style="width: 75%"></div></div>
-                </div>
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between"><span>SQL / Bases de Datos</span> <span>70%</span></div>
-                    <div class="progress"><div class="progress-bar bg-info" style="width: 70%"></div></div>
-                </div>
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between"><span>Git / GitHub</span> <span>85%</span></div>
-                    <div class="progress"><div class="progress-bar bg-warning" style="width: 85%"></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="trayectoria" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Mi Trayectoria</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h5>Grado en Ingeniería Informática</h5>
-                            <span class="text-muted small">2020 - Actualidad | ESI Ciudad Real (UCLM)</span>
-                            <p class="mt-2">Especialización en Tecnologías de la Información. Nota media actual: X.X.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h5>Proyecto de [Asignatura Importante]</h5>
-                            <span class="text-muted small">2023 | Rol: Backend Developer</span>
-                            <p class="mt-2">Desarrollo de una aplicación web para gestión de... utilizando Spring Boot.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h5>Certificación / Curso Extra</h5>
-                            <span class="text-muted small">2022 | Entidad Emisora</span>
-                            <p class="mt-2">Curso intensivo sobre Cloud Computing y AWS.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-5 container">
-        <h2 class="text-center mb-5">Mis Proyectos</h2>
-        <div class="row g-4">
-            
-            <div class="col-md-4">
-                <div class="card project-card border-0 shadow-sm">
-                    <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Gestor de E-Commerce</h5>
-                        <p class="card-text text-muted">Aplicación web completa con carrito de compra y pasarela de pago simulada.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-primary">Java</span>
-                            <span class="badge bg-secondary">Spring</span>
-                            <span class="badge bg-dark">MySQL</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> Repo</a>
-                            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card project-card border-0 shadow-sm">
-                    <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">App Móvil de Gestión</h5>
-                        <p class="card-text text-muted">App Android nativa para gestión de tareas académicas.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-success">Android</span>
-                            <span class="badge bg-secondary">Kotlin</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> Repo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card project-card border-0 shadow-sm">
-                    <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Algoritmo de IA</h5>
-                        <p class="card-text text-muted">Implementación de redes neuronales para clasificación de imágenes.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-warning text-dark">Python</span>
-                            <span class="badge bg-info text-dark">TensorFlow</span>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-dark btn-sm"><i class="fab fa-github"></i> Repo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white py-4 text-center mt-5">
-        <div class="container">
-            <h3>Contáctame</h3>
-            <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
-            <div class="mb-3">
-                <a href="mailto:tu-email@alu.uclm.es" class="text-white text-decoration-none h4 me-3"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/tu-usuario" class="text-white text-decoration-none h4 me-3"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/tu-usuario" class="text-white text-decoration-none h4"><i class="fab fa-github"></i></a>
-            </div>
-            <small>&copy; 2024 [Tu Nombre]. Desarrollado con Bootstrap y GitHub Pages.</small>
-        </div>
-    </footer>
-
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
