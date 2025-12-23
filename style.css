@@ -8,6 +8,12 @@
     --text-muted: #94a3b8;
 }
 
+body {
+    /* Esto empuja todo el contenido hacia abajo para que no 
+       empiece pegado al techo tapado por la barra */
+    padding-top: 80px; 
+}
+
 body, html { 
     height: 100%; 
     font-family: 'Inter', sans-serif;
