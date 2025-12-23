@@ -507,30 +507,41 @@ strong {
    ========================================= */
 
 /* Contenedor que centra la tarjeta vertical y horizontalmente */
+/* =========================================
+   CORRECCIÓN: CENTRADO DE CONTACTO
+   ========================================= */
+
 .contact-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;                 /* OBLIGATORIO: Ocupar todo el ancho */
+    min-height: 100vh;           /* Ocupar toda la altura */
+    display: flex;               /* Activar modo flexible */
+    justify-content: center;     /* Centrar horizontalmente -> | <- */
+    align-items: center;         /* Centrar verticalmente */
+    
+    /* El mismo fondo que el inicio */
     background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-    padding: 80px 20px; /* Espacio para que no toque la navbar */
+    
+    padding-top: 60px;           /* Compensar la barra de menú fija */
+    padding-bottom: 20px;
 }
 
-/* La Tarjeta de Visita (Business Card) */
+/* (El resto de estilos de .business-card déjalos como estaban) */
 .business-card {
-    background: rgba(30, 41, 59, 0.6);     /* Fondo oscuro semitransparente */
-    backdrop-filter: blur(15px);           /* Desenfoque potente */
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 3rem;
     width: 100%;
-    max-width: 450px;                      /* Ancho máximo similar a un móvil o tarjeta */
+    max-width: 450px;
     text-align: center;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
+    margin: 0 auto; /* Seguro extra para centrar */
 }
+
 
 /* Decoración: Barra de color arriba */
 .business-card::before {
