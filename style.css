@@ -501,3 +501,96 @@ strong {
         margin-bottom: 2rem; /* Separación con el texto */
     }
 }
+
+/* =========================================
+   ESTILOS: CONTACTO (TARJETA DE VISITA)
+   ========================================= */
+
+/* Contenedor que centra la tarjeta vertical y horizontalmente */
+.contact-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+    padding: 80px 20px; /* Espacio para que no toque la navbar */
+}
+
+/* La Tarjeta de Visita (Business Card) */
+.business-card {
+    background: rgba(30, 41, 59, 0.6);     /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(15px);           /* Desenfoque potente */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 450px;                      /* Ancho máximo similar a un móvil o tarjeta */
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoración: Barra de color arriba */
+.business-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--primary-gradient);
+}
+
+/* Estilo de los items de la lista (Email, Edad...) */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left; /* El texto queda mejor alineado a la izquierda */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+/* Iconos de la lista */
+.contact-item i {
+    width: 40px;
+    font-size: 1.2rem;
+    color: #60a5fa; /* Azul claro */
+    text-align: center;
+}
+
+/* Botón Grande de LinkedIn */
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote */
+}
+
+.linkedin-btn:hover {
+    background: #0077b5; /* Color oficial de LinkedIn */
+    border-color: #0077b5;
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 0 20px rgba(0, 119, 181, 0.6);
+}
