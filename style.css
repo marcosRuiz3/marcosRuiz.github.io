@@ -136,7 +136,7 @@ h1 {
 
 /* Gradiente en el texto */
 .text-gradient {
-    background: var(--primary-gradient);
+    background: var(--primary-gradient) !important;
     -webkit-background-clip: text; /* Safari/Chrome */
     background-clip: text; /* Estándar */
     -webkit-text-fill-color: transparent;
