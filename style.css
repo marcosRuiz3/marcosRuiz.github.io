@@ -222,63 +222,84 @@ p.lead {
 }
 
 /* =========================================
-   NUEVO ESTILO: SOFT SKILLS EN CAJAS
+   ESTILO FINAL: SOFT SKILLS (CAJAS VISUALES)
    ========================================= */
 
-/* Estilo del Icono Grande */
+.soft-skill-box {
+    /* Estilo base tipo cristal (igual que el stack pero adaptado) */
+    background: rgba(30, 41, 59, 0.4); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    
+    padding: 20px 10px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, background 0.3s ease;
+    
+    /* Flex para centrar todo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.soft-skill-box:hover {
+    transform: translateY(-5px);
+    background: rgba(30, 41, 59, 0.8); /* Se oscurece un poco al pasar el ratón */
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ESTILO DE LOS ICONOS (Color permanente) */
 .soft-skill-box i {
-    font-size: 2.5rem; 
-    margin-bottom: 10px;
-    background: linear-gradient(45deg, #eee, #999); 
+    font-size: 2.2rem; /* Tamaño grande */
+    margin-bottom: 12px;
     
-    /* SOLUCIÓN: Poner siempre estas dos líneas juntas */
-    -webkit-background-clip: text; /* Para Chrome/Safari */
-    background-clip: text;         /* Estándar para el futuro */
-    
+    /* TRUCO PARA EL DEGRADADO EN EL ICONO */
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    
+    display: inline-block;
 }
 
-/* Colores específicos al hacer hover (Corrección aplicada aquí también) */
-.soft-skill-box:hover i.text-primary { 
-    background: var(--primary-gradient); 
-    -webkit-background-clip: text; 
-    background-clip: text; /* <--- Añadido */
+/* DEFINICIÓN DE LOS DEGRADADOS (Siempre visibles) */
+
+/* Azul (Primary) */
+.soft-skill-box i.text-primary { 
+    background-image: var(--primary-gradient); 
 }
 
-.soft-skill-box:hover i.text-warning { 
-    background: linear-gradient(to right, #f6d365, #fda085); 
-    -webkit-background-clip: text; 
-    background-clip: text; /* <--- Añadido */
+/* Naranja (Warning) */
+.soft-skill-box i.text-warning { 
+    background-image: linear-gradient(to right, #f6d365, #fda085); 
 }
 
-.soft-skill-box:hover i.text-success { 
-    background: linear-gradient(to right, #84fab0, #8fd3f4); 
-    -webkit-background-clip: text; 
-    background-clip: text; /* <--- Añadido */
+/* Verde (Success) */
+.soft-skill-box i.text-success { 
+    background-image: linear-gradient(to right, #84fab0, #8fd3f4); 
 }
 
-.soft-skill-box:hover i.text-info { 
-    background: linear-gradient(to right, #a1c4fd, #c2e9fb); 
-    -webkit-background-clip: text; 
-    background-clip: text; /* <--- Añadido */
+/* Cian (Info) */
+.soft-skill-box i.text-info { 
+    background-image: linear-gradient(to right, #a1c4fd, #c2e9fb); 
 }
 
-.soft-skill-box:hover i.text-danger { 
-    background: linear-gradient(to right, #ff9a9e, #fecfef); 
-    -webkit-background-clip: text; 
-    background-clip: text; /* <--- Añadido */
+/* Rojo/Rosa (Danger) */
+.soft-skill-box i.text-danger { 
+    background-image: linear-gradient(to right, #ff9a9e, #fecfef); 
 }
 
-.soft-skill-box:hover i.text-light { 
-    background: linear-gradient(to right, #e0eafc, #cfdef3); 
-    -webkit-background-clip: text; 
-    background-clip: text; /* <--- Añadido */
+/* Blanco/Gris (Light) */
+.soft-skill-box i.text-light { 
+    background-image: linear-gradient(to right, #e0eafc, #cfdef3); 
 }
 
-/* Texto de la habilidad */
+/* Texto debajo del icono */
 .soft-skill-box span {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-main);
 }
