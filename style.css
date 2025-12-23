@@ -450,3 +450,37 @@ strong {
     display: inline-block;
     margin-bottom: 5px;
 }
+
+/* =========================================
+   ESTILO NUEVO: PORTADA DIVIDIDA
+   ========================================= */
+
+/* Imagen Vertical Rectangular */
+.profile-img-rect {
+    width: 100%;             /* Ocupa el ancho de su columna */
+    max-width: 400px;        /* Que no sea gigantesca en pantallas muy grandes */
+    height: 500px;           /* Altura fija para forzar el formato vertical */
+    object-fit: cover;       /* Recorta la foto para que no se deforme */
+    object-position: center top; /* Centra la cara (ajusta si se corta la cabeza) */
+    
+    border-radius: 20px;     /* Bordes redondeados modernos */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5); /* Sombra profunda */
+    
+    /* Efecto sutil de flotación */
+    transform: rotate(-2deg); /* Un toque de diseño inclinado (opcional) */
+    transition: transform 0.3s ease;
+}
+
+.profile-img-rect:hover {
+    transform: rotate(0deg) scale(1.02); /* Se endereza al pasar el ratón */
+}
+
+/* Ajuste para móvil: que no sea tan alta */
+@media (max-width: 768px) {
+    .profile-img-rect {
+        height: 350px;
+        margin-bottom: 30px;
+        transform: rotate(0deg); /* En móvil mejor recta */
+    }
+}
