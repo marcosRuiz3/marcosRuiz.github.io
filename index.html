@@ -97,8 +97,17 @@
         /* Gradiente en el texto del nombre */
         .text-gradient {
             background: var(--primary-gradient);
+            
+            /* Versión para Chrome/Safari (la que tenías) */
             -webkit-background-clip: text;
+            
+            /* Versión ESTÁNDAR (la que te pide el aviso) */
+            background-clip: text;
+            
+            /* Hacemos el texto transparente para que se vea el fondo */
             -webkit-text-fill-color: transparent;
+            color: transparent; /* Añade esta también por seguridad */
+            
             display: inline-block;
         }
 
@@ -153,7 +162,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">MR.</a>
+            <a class="navbar-brand fw-bold" href="index.html">Marcos Ruiz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
