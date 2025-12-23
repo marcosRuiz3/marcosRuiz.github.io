@@ -8,17 +8,13 @@
     --text-muted: #94a3b8;
 }
 
+
+
 body, html { 
-    /* --- TUS ESTILOS ORIGINALES (CONSÉRVALOS) --- */
     height: 100%; 
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark); /* Fondo oscuro */
-    color: var(--text-main);          /* Texto claro */
-
-    /* --- EL NUEVO AJUSTE (AÑÁDELO) --- */
-    /* Empuja todo el contenido 80px hacia abajo para que 
-       la barra de menú (que es 'fixed') no lo tape al cargar */
-    padding-top: 80px; 
+    background-color: var(--bg-dark);
+    color: var(--text-main);
 }
 
 /* =========================================
