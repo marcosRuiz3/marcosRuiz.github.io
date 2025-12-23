@@ -601,6 +601,34 @@ strong {
 }
 
 /* =========================================
+   BOTÓN GITHUB
+   ========================================= */
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Efecto Hover: Fondo oscuro y brillo violeta */
+.github-btn:hover {
+    background: #171515; /* Color oficial GitHub */
+    border-color: #6e5494; /* Violeta GitHub */
+    color: white;
+    transform: scale(1.15) rotate(-5deg); /* Gira un poco al otro lado */
+    box-shadow: 0 0 20px rgba(110, 84, 148, 0.6); /* Brillo violeta */
+}
+
+/* =========================================
    ESTILO: FOTO CONTACTO (LADO IZQUIERDO)
    ========================================= */
 
