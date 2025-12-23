@@ -452,43 +452,52 @@ strong {
 }
 
 /* =========================================
-   CORRECCIÓN FINAL: PORTADA DIVIDIDA
+   CORRECCIÓN: PORTADA DIVIDIDA
    ========================================= */
 
-/* 1. El contenedor principal (Fondo completo) */
+/* Hacemos que la sección ocupe TODA la altura de la pantalla */
 .hero-container {
-    min-height: 100vh;           /* Ocupa toda la altura de la pantalla */
-    display: flex;               /* Activa el modo flexible */
-    align-items: center;         /* Centra verticalmente todo el contenido */
+    min-height: 100vh; /* Altura mínima: 100% del alto de la ventana */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center;
+    padding-top: 80px; /* Compensar la navbar fija */
+    padding-bottom: 50px;
+    
+    /* Tu fondo radial */
     background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-    padding: 100px 0;            /* Espacio arriba y abajo para que no toque bordes */
 }
 
-/* 2. La Foto Vertical (Rectangular) */
+/* Estilo de la imagen rectangular */
 .profile-img-rect {
-    width: 100%;                 /* Que ocupe el ancho de su columna */
-    max-width: 380px;            /* Pero que no pase de este ancho */
-    height: 500px;               /* ALTURA FIJA: Para que sea vertical */
+    width: 100%;
+    max-width: 380px; /* Tamaño ideal para escritorio */
+    height: 500px;    /* Altura fija para el formato vertical */
+    object-fit: cover; /* CLAVE: Recorta la foto sin deformarla */
+    object-position: center top; /* Enfoca la parte de arriba (la cara) */
     
-    /* ¡LA CLAVE MÁGICA! */
-    object-fit: cover;           /* Recorta la imagen, NO la deforma */
-    object-position: center top; /* Enfoca la parte de arriba (tu cara) */
-    
-    border-radius: 20px;         /* Bordes redondeados */
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    
+    transition: transform 0.3s ease;
 }
 
-/* 3. Ajuste para Móviles */
+.profile-img-rect:hover {
+    transform: scale(1.02) rotate(1deg);
+}
+
+/* --- VERSIÓN MÓVIL (Importante para que no se vea mal) --- */
 @media (max-width: 991px) {
     .hero-container {
-        text-align: center;      /* En móvil todo centrado */
-        min-height: auto;        /* Quitar altura forzada */
+        text-align: center; /* Forzar centrado de texto en móvil */
+        height: auto;       /* Quitar altura fija */
+        padding-top: 100px;
     }
     
     .profile-img-rect {
-        height: 350px;           /* Más pequeña en el móvil */
-        max-width: 300px;
-        margin-bottom: 30px;     /* Espacio debajo de la foto */
+        height: 350px;      /* Más bajita en tablet/móvil */
+        max-width: 300px;   /* Más estrecha */
+        margin-bottom: 2rem; /* Separación con el texto */
     }
 }
