@@ -19,73 +19,44 @@ body, html {
    MEJORA: NAVBAR PREMIUM (GLASSMORPHISM)
    ========================================= */
 
+/* --- ESTILOS DE LA BARRA CRISTAL --- */
 .navbar {
-    /* Fondo inicial: Transparente con un toque de desenfoque */
-    background: rgba(15, 23, 42, 0.1); 
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.0); /* Borde invisible al inicio */
-    transition: all 0.4s ease; /* Transición suave para todo */
-    padding: 15px 0; /* Un poco más alta al principio */
+    background: rgba(15, 23, 42, 0.1) !important; /* !important fuerza a quitar el negro */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+    padding: 15px 0;
 }
 
-/* ESTADO SCROLLED (Cuando bajas la página) */
+/* Cuando bajamos el scroll */
 .navbar.scrolled {
-    background: rgba(15, 23, 42, 0.9); /* Más oscura y sólida */
-    backdrop-filter: blur(15px);       /* Más desenfoque */
-    border-bottom: 1px solid rgba(59, 130, 246, 0.3); /* Borde azul sutil */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar altura */
-    padding: 10px 0; /* Se hace un poco más compacta */
+    background: rgba(15, 23, 42, 0.95) !important; /* Casi opaco al bajar */
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.3);
 }
 
-/* LOGO CON GRADIENTE */
-.navbar-brand {
-    font-size: 1.5rem;
-    background: var(--primary-gradient); /* Tu gradiente */
-    
-    /* CORRECCIÓN AQUÍ: */
-    -webkit-background-clip: text;
-    background-clip: text;
-    
-    /* OBLIGATORIO: El texto debe ser transparente para que se vea el fondo */
-    -webkit-text-fill-color: transparent;
-    color: transparent; 
-    
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+/* --- BOTÓN DE CONTACTO EN EL MENÚ --- */
+.contact-btn-nav {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    color: #3b82f6 !important; /* Texto azul */
+    border-radius: 50px;       /* Redondo */
+    padding: 8px 20px !important;
+    transition: all 0.3s ease;
+    margin-left: 10px;
 }
 
-/* ENLACES (Items del menú) */
-.nav-link {
-    position: relative;
-    color: rgba(255, 255, 255, 0.8) !important;
-    font-weight: 500;
-    margin: 0 5px;
-    transition: color 0.3s ease;
+.contact-btn-nav:hover {
+    background: #3b82f6;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
 }
 
-.nav-link:hover, .nav-link.active {
-    color: #fff !important;
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-}
-
-/* LA LÍNEA DE NEÓN BAJO EL ENLACE */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background: #3b82f6; /* Color azul neón */
-    box-shadow: 0 0 10px #3b82f6;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform: translateX(-50%);
-}
-
-/* Al pasar el ratón o estar activo, la línea crece */
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 80%;
+/* Quitar la línea de abajo (underline) solo para el botón de contacto */
+.contact-btn-nav::after {
+    display: none;
 }
 
 /* HERO SECTION */
